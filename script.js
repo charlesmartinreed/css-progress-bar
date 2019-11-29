@@ -7,7 +7,8 @@ let currentWidth;
 var intervalID = setInterval(() => {
   // get current width of progress bar and increment it
   if (currentWidth >= 100.0) {
-    unload();
+    clearInterval(intervalID);
+    console.log("loading complete");
   }
 
   currentWidth = parseFloat(computedStyle.getPropertyValue("--width")) || 0;
@@ -15,10 +16,3 @@ var intervalID = setInterval(() => {
   progressBar.style.setProperty("--width", currentWidth + 0.1);
   console.log(currentWidth);
 }, 5);
-
-const unload = () => {
-  clearInterval(intervalID);
-  console.log("loading done");
-
-  return;
-};
