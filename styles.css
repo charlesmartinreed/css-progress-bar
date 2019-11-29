@@ -52,8 +52,9 @@ body {
   letter-spacing: 0.7em;
   text-transform: uppercase;
   font-weight: 700;
+  /* font-size: 0.8em; */
 
   background-color: mediumseagreen;
   border-radius: 1em;
-  padding: 1em;
+  padding: 1rem;
 }
