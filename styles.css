@@ -42,7 +42,10 @@ body {
   top: 0.5em;
   bottom: 0.5em;
 
-  width: 5%;
+  /* width: 5%; */
+
+  /* by multiplying a value by 1%, it turns the value itself into a percentage   */
+  width: calc(var(--width, 0) * 1%);
   min-width: 2rem;
   max-width: calc(100% - 1em);
 
